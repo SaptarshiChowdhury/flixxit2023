@@ -82,7 +82,7 @@ export default function SignIn() {
               }}
               className="auth-button"
             >
-              SignIn
+              Sign In
             </Button>
           </Box>
 
