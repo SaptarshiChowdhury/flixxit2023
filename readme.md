@@ -83,3 +83,9 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 If you have any questions or need further assistance, please contact our help desk at support@flixxit.com.
+
+## While Deploying
+
+- frontend .env -> change http://localhost:5050/api -> /api
+- change nodemon -> node in server package.json
+- build frontend and copy contents from build to dist folder in server/src
