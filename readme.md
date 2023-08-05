@@ -1,5 +1,7 @@
 # Flixxit
 
+- Live Demo -> https://flixxit-qa44.onrender.com/
+
 ## While Deploying
 
 - frontend .env -> change http://localhost:5050/api -> /api
