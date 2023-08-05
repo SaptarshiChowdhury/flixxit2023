@@ -12,6 +12,8 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { checkSubscription } from "../apis/auth";
 import { hideLoader, showLoader } from "../components/common_functions";
+import VolumeOffIcon from "@mui/icons-material/VolumeOff";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 export default function Home() {
   const [home_videos, setHomeVideos] = useState({});
   const [selectedVid, setSelectedVid] = useState({ name: "videoUrl" });
@@ -81,12 +83,14 @@ export default function Home() {
     else section_div.scrollLeft -= window_width * 0.7;
   };
   const mobile = window.innerWidth <= 720;
+
+  const [volume, setVolume] = useState(true);
   return (
     <Box>
       {user ? (
         <>
           <Box className="home-video-container">
-            <video autoPlay loop id="home-video">
+            <video autoPlay muted={volume} loop id="home-video">
               <source type="video/mp4" />
             </video>
           </Box>
@@ -147,6 +151,35 @@ export default function Home() {
                   >
                     More Info
                   </Button>
+                </Box>
+                <Box
+                  sx={{
+                    position: "relative",
+                    zIndex: "10",
+                    display: "flex",
+                    justifyContent: "end",
+                    width: "100%",
+                    mt: "-5vh",
+                    svg: {
+                      cursor: "pointer",
+                    },
+                  }}
+                >
+                  {volume ? (
+                    <VolumeOffIcon
+                      onClick={() => {
+                        setVolume(false);
+                        console.log(false);
+                      }}
+                    />
+                  ) : (
+                    <VolumeUpIcon
+                      onClick={() => {
+                        setVolume(true);
+                        console.log(true);
+                      }}
+                    />
+                  )}
                 </Box>
               </Box>
             </Box>
