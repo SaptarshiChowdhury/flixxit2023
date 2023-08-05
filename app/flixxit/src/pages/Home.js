@@ -452,7 +452,7 @@ export default function Home() {
           </Box>
         </Box>
       )}
-      {Object.keys(cat_genrs).map((cat) => {
+      {Object.keys(cat_genrs).map((cat, ind) => {
         return (
           <Box className="home-watchlist-container">
             <Box
@@ -469,7 +469,7 @@ export default function Home() {
                 {!mobile && (
                   <Button
                     onClick={() => {
-                      move(2, "left");
+                      move(ind + 3, "left");
                     }}
                     className="cards-left-icon"
                   >
@@ -487,7 +487,7 @@ export default function Home() {
                 {!mobile && (
                   <Button
                     onClick={() => {
-                      move(2, "right");
+                      move(ind + 3, "right");
                     }}
                     className="cards-right-icon"
                   >

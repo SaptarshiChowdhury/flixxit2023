@@ -89,3 +89,4 @@ If you have any questions or need further assistance, please contact our help de
 - frontend .env -> change http://localhost:5050/api -> /api
 - change nodemon -> node in server package.json
 - build frontend and copy contents from build to dist folder in server/src
+- make the changes in VideoPlayer.js in frontend file at line 87 -> 92

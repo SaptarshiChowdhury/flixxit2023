@@ -84,7 +84,12 @@ const VideoPlayer = () => {
   }, [qualityChanged]);
 
   useEffect(() => {
-    let id = window.location.href.split("/").pop();
+    //developing
+    // let id = window.location.href.split("/").pop();
+
+    //deploying
+    const temp = window.location.href.split("/");
+    let id = temp[temp.length - 2];
     const user =
       localStorage.getItem("userdet") &&
       JSON.parse(localStorage.getItem("userdet"));
