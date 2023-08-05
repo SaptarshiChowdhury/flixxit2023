@@ -17,6 +17,7 @@ import PayCard from "./components/PayCard";
 import Loader from "./components/Loader";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./styles/styles";
+import { Box } from "@mui/material";
 
 function App() {
   return (
@@ -52,7 +53,8 @@ function App() {
             <Route path="/Search" element={<Search />} />
             <Route path="/SingleMovie/:id" element={<SingleMovie />} />
           </Routes>
-          <PayCard />
+          <Box id="payCard"></Box>
+
           <Loader />
         </Router>
       </ThemeProvider>
