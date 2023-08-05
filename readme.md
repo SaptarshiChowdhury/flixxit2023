@@ -1,5 +1,12 @@
 # Flixxit
 
+## While Deploying
+
+- frontend .env -> change http://localhost:5050/api -> /api
+- change nodemon -> node in server package.json
+- build frontend and copy contents from build to dist folder in server/src
+- make the changes in VideoPlayer.js in frontend file at line 87 -> 92
+
 ## Project Brief
 
 Flixxit is a web application that aims to replicate the user experience and basic features of popular OTT platforms like Netflix, Prime Video, and AppleTV+. While the actual production-ready platforms are built with complex microservices and infrastructure, the objective of this project is to develop the core user functionality.
@@ -83,10 +90,3 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 If you have any questions or need further assistance, please contact our help desk at support@flixxit.com.
-
-## While Deploying
-
-- frontend .env -> change http://localhost:5050/api -> /api
-- change nodemon -> node in server package.json
-- build frontend and copy contents from build to dist folder in server/src
-- make the changes in VideoPlayer.js in frontend file at line 87 -> 92

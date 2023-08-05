@@ -85,11 +85,11 @@ const VideoPlayer = () => {
 
   useEffect(() => {
     //developing
-    // let id = window.location.href.split("/").pop();
+    let id = window.location.href.split("/").pop();
 
     //deploying
-    const temp = window.location.href.split("/");
-    let id = temp[temp.length - 2];
+    // const temp = window.location.href.split("/");
+    // let id = temp[temp.length - 2];
 
     const user =
       localStorage.getItem("userdet") &&
