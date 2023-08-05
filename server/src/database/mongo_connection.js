@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
   ratings: [String],
   downvote: [String],
   recentlyWatched: [String],
-  wishlist: [String],
+  watchlist: [String],
   resetToken: String,
   resetTokenExpiration: String,
 });
@@ -60,7 +60,7 @@ module.exports = {
  *      prefered video quality
  *      subscription:boolean
  *      recently watched:content collection id
- *      wishlist:content collection id
+ *      watchlist:content collection id
  * content collection:
  *      geners(horror, animation, action):
  *          (each movie)

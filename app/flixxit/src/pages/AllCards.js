@@ -5,11 +5,12 @@ import { getRecentlyWatched } from "../apis/Home";
 import { useLocation } from "react-router-dom";
 import "../styles/allcards.css";
 export default function AllCards(params) {
-  const title = params.path == "wishlist" ? "WatchList" : "Recently Watched";
+  const title = params.path == "watchlist" ? "WatchList" : "Recently Watched";
   const [cards, setCards] = useState([]);
   const location = useLocation();
   useEffect(() => {
-    const api_url = params.path == "wishlist" ? "wishlist" : "recentlyWatched";
+    const api_url =
+      params.path == "watchlist" ? "watchlist" : "recentlyWatched";
     getRecentlyWatched(api_url).then((res) => {
       console.log(res);
       if (res) {
