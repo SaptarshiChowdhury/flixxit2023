@@ -133,12 +133,20 @@ export default function Home() {
                 <Box className="three-line-clamp" sx={{ fontSize: "2.2vh" }}>
                   {selectedVid.description}
                 </Box>
-                <Box sx={{ mt: "4vh", display: "flex", gap: "3vh" }}>
+                <Box
+                  sx={{
+                    mt: "4vh",
+                    display: "flex",
+                    gap: "3vh",
+                    position: "relative",
+                    zIndex: "10",
+                  }}
+                >
                   <Button
                     sx={{ ...styles.primary_button }}
                     onClick={async () => {
                       const check = await checkSubscription();
-                      if (check) go("/VideoPlay/" + selectedVid._id);
+                      if (check) window.open("/VideoPlay/" + selectedVid._id);
                     }}
                     startIcon={<PlayCircleIcon />}
                   >
